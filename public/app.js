@@ -1,6 +1,8 @@
 angular.module('chat', [])
 
   .factory('socket', function ($rootScope) {
+    // See: http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
+    // for further details about this wrapper
     var socket = io.connect();
     return {
       on: function (eventName, callback) {
